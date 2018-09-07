@@ -6,8 +6,8 @@
 		<%= i.description %>
 		<%= i.completed %>
 		<%= link_to 'Mostrar', i, method: :get %>
-		<%= link_to 'Editar', i, method: :patch %>
-		<%= link_to 'Completar', i, method: :get %>
+		<%= link_to 'Editar', edit_path(i) %>
+		<%= link_to 'Completar', complete_path(i) %>
 		<%= link_to 'Borrar', i, method: :delete %>
 		</div>
 	<% end %>
