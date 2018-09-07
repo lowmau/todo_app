@@ -1,0 +1,10 @@
+<h1>todos#new</h1>
+
+
+<%= form_with(model:@todo, local:true) do |f| %>
+	<%= f.label :Description %>
+	<%= f.text_field :description %>
+	<%= f.label :Complete %>
+	<%= f.text_field :completed %>
+	<%= f.submit "Save" %>
+<% end %>
