@@ -41,6 +41,12 @@ class TodosController < ApplicationController
  		redirect_to todos_path
 	end
 
+	def list
+		@todo = Todo.all
+		@a = @todo.select{ |i| i.completed == true }
+		@b = @todo.select{ |i| i.completed == false }
+	end
+
 	private 
 		def todo_params
 			params.require(:todo).permit(:description, :completed)

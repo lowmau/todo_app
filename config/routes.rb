@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 	patch '/todos/:id', to: 'todos#update'
 	delete '/todos/:id', to: 'todos#destroy'	
 	get '/todos/:id/complete', to: 'todos#complete', as: 'complete'
+	get '/todo/list', to: 'todos#list', as: 'lista'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
